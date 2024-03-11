@@ -10,9 +10,11 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
-          ./hardware-configuration.nix
-	  disko.nixosModules.disko
+          ./host/kyubey
+
+          disko.nixosModules.disko
+
+          ({ ... }: { networking.hostName = "kyubey"; })
         ];
       };
     };
