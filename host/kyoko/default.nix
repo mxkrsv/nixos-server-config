@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     ../common
-    ../common/virtual
 
     ./hardware-configuration.nix
     ./networking.nix # generated at runtime by nixos-infect
