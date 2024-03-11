@@ -17,6 +17,20 @@
           ({ ... }: { networking.hostName = "kyubey"; })
         ];
       };
+      kyoko = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./host/kyoko
+
+          ({ ... }: {
+            networking = {
+              hostName = "kyoko";
+              domain = "aeza.network";
+            };
+          })
+        ];
+      };
     };
   };
 }
