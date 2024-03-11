@@ -20,6 +20,11 @@
   users.users.mxkrsv = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
+
+    openssh.authorizedKeys.keys = [
+      ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGpUBOdwjO4iYwQiPQ9vDtvolAas4rBzp/Bc2tv0Zk8h mxkrsv@homura''
+      ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMkupsms0fUp4SflgKwVBfKRXi8eY51cgbex4aXerC5B mxkrsv@sayaka''
+    ];
   };
 
   # List packages installed in system profile.
@@ -33,7 +38,13 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      # More security
+      PasswordAuthentication = false;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
