@@ -26,7 +26,7 @@
           ({ ... }: {
             networking = {
               hostName = "kyoko";
-              domain = "aeza.network";
+              domain = "mxkrsv.dev";
             };
           })
         ];
