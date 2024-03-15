@@ -1,4 +1,8 @@
 { pkgs, lib, inputs, ... }: {
+  imports = [
+    ./secrets.nix
+  ];
+
   nix = {
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
