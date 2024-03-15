@@ -26,6 +26,8 @@
 
           agenix.nixosModules.default
 
+          ./services/shadowsocks
+
           ({ ... }: {
             networking = {
               hostName = "kyoko";
