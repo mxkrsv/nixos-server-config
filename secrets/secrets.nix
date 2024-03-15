@@ -8,4 +8,6 @@ in
 {
   "porkbun_api_key.age".publicKeys = systems ++ users;
   "porkbun_secret_api_key.age".publicKeys = systems ++ users;
+
+  "shadowsocks_password.age".publicKeys = systems ++ users;
 }
