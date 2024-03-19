@@ -26,6 +26,8 @@
 
           agenix.nixosModules.default
 
+          ./services/sing-box
+
           ({ ... }: {
             networking = {
               hostName = "kyoko";
