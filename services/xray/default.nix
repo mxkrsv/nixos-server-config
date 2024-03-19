@@ -36,7 +36,7 @@
                 serverName = host;
                 certificates = [
                   {
-                    certificateFile = "${certPath}/cert.pem";
+                    certificateFile = "${certPath}/fullchain.pem";
                     keyFile = "${certPath}/key.pem";
                   }
                 ];
