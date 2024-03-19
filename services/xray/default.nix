@@ -1,7 +1,7 @@
 { config, ... }: {
   services.xray =
     let
-      host = "${config.network.hostName}.${config.network.domain}";
+      host = "${config.networking.hostName}.${config.networking.domain}";
       certPath = "${config.security.acme.certs.${host}.directory}";
     in
     {
