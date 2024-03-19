@@ -26,6 +26,8 @@
 
           agenix.nixosModules.default
 
+          ./services/xray
+
           ({ ... }: {
             networking = {
               hostName = "kyoko";
