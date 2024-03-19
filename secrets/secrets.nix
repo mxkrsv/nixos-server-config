@@ -4,8 +4,11 @@ let
 
   kyoko = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILpUGbxpGbY3N7Vhsz6LC2tT1g6yY0QMeVcrub4isHEB";
   systems = [ kyoko ];
+  singBoxSystems = [ kyoko ];
 in
 {
   "porkbun_api_key.age".publicKeys = systems ++ users;
   "porkbun_secret_api_key.age".publicKeys = systems ++ users;
+
+  "singbox_uuid_mxkrsv.age".publicKeys = singBoxSystems ++ users;
 }
