@@ -22,7 +22,8 @@
 
               clients = [
                 {
-                  id = config.age.secrets.xray_uuid_mxkrsv;
+                  # TODO: in the nix store anyway; need to figure out a fix later
+                  id = builtins.readFile config.age.secrets.xray_uuid_mxkrsv.path;
                   email = "mxkrsv@disroot.org";
                   level = 0;
                 }
@@ -36,8 +37,10 @@
                 serverName = host;
                 certificates = [
                   {
-                    certificateFile = "${certPath}/fullchain.pem";
-                    keyFile = "${certPath}/key.pem";
+                    # TODO: have to put them to the store because of a check
+                    # in the nixos module
+                    certificateFile = /. + "${certPath}/cert.pem";
+                    keyFile = /. + "${certPath}/key.pem";
                   }
                 ];
               };
