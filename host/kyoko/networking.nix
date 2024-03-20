@@ -20,7 +20,7 @@
         ];
         ipv6.addresses = [
           { address = "2a12:5940:4887::2"; prefixLength = 48; }
-          { address = "fe80::5054:ff:fe17:1bc2"; prefixLength = 64; }
+          #{ address = "fe80::5054:ff:fe17:1bc2"; prefixLength = 64; }
         ];
         ipv4.routes = [{ address = "10.0.0.1"; prefixLength = 32; }];
         ipv6.routes = [{ address = "2a12:5940:4887::1"; prefixLength = 128; }];
