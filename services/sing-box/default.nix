@@ -21,6 +21,7 @@
             users = [
               {
                 name = "mxkrsv";
+                flow = "xtls-rprx-vision";
                 uuid = {
                   _secret = config.age.secrets.singbox_uuid_mxkrsv.path;
                 };
@@ -28,6 +29,7 @@
             ];
 
             tls = {
+              enabled = true;
               server_name = host;
               certificate_path = "${certPath}/cert.pem";
               key_path = "${certPath}/key.pem";
